@@ -115,3 +115,37 @@ nav {
     font-size: 1.3rem;
   }
 }
+
+.resume-container {
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 0 20px;
+}
+
+.resume-title {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #333;
+}
+
+.pdf-wrapper {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    background: #fff;
+}
+
+.pdf-wrapper embed {
+    display: block;
+    border: none;
+}
+
+@media (max-width: 768px) {
+    .resume-container {
+        margin: 1rem auto;
+    }
+    
+    .pdf-wrapper embed {
+        height: 600px;
+    }
+}
