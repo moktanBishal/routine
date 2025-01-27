@@ -187,24 +187,39 @@ nav {
   flex-direction: column; /* Stack elements vertically on mobile */
   align-items: flex-start;
   gap: 10px;
+  width: 100%; /* Ensure full width */
+  box-sizing: border-box; /* Include padding in width calculation */
 }
 
 .task-controls {
   width: 100%;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  display: flex;
+  flex-direction: column; /* Stack controls vertically on mobile */
+  gap: 8px;
 }
 
 .task-timer {
-  font-size: 16px;
+  font-size: 14px; /* Smaller font size for mobile */
   width: 100%;
-  text-align: left;
+  text-align: center; /* Center align the timer */
   margin-bottom: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .time-inputs {
+  display: flex;
   flex-wrap: wrap;
-  margin: 5px 0;
+  gap: 5px;
+  justify-content: center; /* Center the time inputs */
+  width: 100%;
+}
+
+.time-inputs input {
+  width: 45px; /* Smaller input width */
+  padding: 4px;
+  font-size: 12px;
 }
 
 /* Add media query for larger screens */
@@ -234,7 +249,18 @@ nav {
   }
 
   .task-controls {
-    width: auto;
-    flex-wrap: nowrap;
+    flex-direction: row; /* Restore horizontal layout */
+    align-items: center;
+    gap: 15px;
+  }
+
+  .time-inputs {
+    justify-content: flex-start;
+  }
+
+  .time-inputs input {
+    width: 60px;
+    padding: 6px;
+    font-size: 14px;
   }
 }
