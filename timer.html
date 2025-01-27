@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task Timer</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <nav>
+    <div class="nav-wrapper">
+      <a href="index.html" class="logo">AI Tools</a>
+      <ul class="nav-links">
+        <li><a href="grok.html">Grok</a></li>
+        <li><a href="gpt.html">GPT</a></li>
+        <li><a href="resume.html">Resume</a></li>
+        <li><a href="timer.html">Timer</a></li>
+      </ul>
+    </div>
+  </nav>
+  <div class="container">
+    <div class="total-time">Total Time: <span id="totalTime">00:00:00</span></div>
+    <div class="task-section">
+      <input type="text" id="taskInput" class="task-input" placeholder="Enter a new task...">
+      <button onclick="addTask()"
+        style="padding: 10px 20px; background-color: #4CAF50; color: white; border: none; border-radius: 4px; cursor: pointer;">Add
+        Task</button>
+      <ul id="taskList" class="task-list"></ul>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+
+</body>
+
+</html>
