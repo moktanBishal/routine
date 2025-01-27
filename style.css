@@ -150,152 +150,91 @@ nav {
     }
 }
 
-/* Timer styles */
-body {
-  /* Remove these conflicting body styles */
-  /* display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  min-height: 100vh;
-  font-family: Arial, sans-serif;
-  margin: 0;
-  background-color: #f0f0f0;
-  padding: 20px; */
-}
-
-/* Add a specific container style for the timer content */
+/* Timer styles - Mobile Friendly Updates */
 .container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 80%;
-  max-width: 800px;
-  background-color: white;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  margin: 0 auto;  /* Center the container */
+  width: 95%; /* Increased from 80% for mobile */
+  padding: 15px; /* Reduced padding */
+  margin: 10px auto;
 }
 
 .timer {
-  font-size: 48px;
-  margin: 20px;
-  text-align: center;
+  font-size: 36px; /* Reduced from 48px */
+  margin: 15px;
 }
 
 .controls {
-  text-align: center;
-  margin-bottom: 30px;
-  padding: 20px;
-  background-color: #f8f8f8;
-  border-radius: 8px;
+  margin-bottom: 20px;
+  padding: 15px;
 }
 
 .controls button {
-  font-size: 18px;
-  margin: 5px;
-  padding: 10px 20px;
-  cursor: pointer;
-  background-color: #4CAF50;
-  color: white;
-  border: none;
-  border-radius: 5px;
-}
-
-.controls button:hover {
-  background-color: #45a049;
+  font-size: 16px; /* Reduced from 18px */
+  padding: 8px 15px;
+  margin: 3px;
+  width: 100%; /* Make buttons full width on mobile */
+  max-width: 200px;
 }
 
 .time-input {
-  width: 70px;
-  padding: 8px;
-  margin: 5px;
-  font-size: 16px;
-  text-align: center;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-}
-
-.task-section {
-  margin-top: 30px;
-}
-
-.task-input {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 10px;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  box-sizing: border-box;
-}
-
-.task-list {
-  list-style: none;
-  padding: 0;
+  width: 60px; /* Slightly reduced */
+  padding: 6px;
+  font-size: 14px;
 }
 
 .task-item {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px;
-  margin: 15px 0;
-  background-color: #f8f8f8;
-  border-radius: 5px;
-  border-left: 4px solid #4CAF50;
-}
-
-.task-item button {
-  padding: 5px 10px;
-  margin-left: 10px;
-  cursor: pointer;
-  background-color: #4CAF50;
-  color: white;
-  border: none;
-  border-radius: 3px;
-}
-
-.task-item button.delete {
-  background-color: #f44336;
-}
-
-.task-item button:hover {
-  opacity: 0.8;
-}
-
-.total-time {
-  font-size: 24px;
-  text-align: center;
-  margin: 20px;
-  padding: 15px;
-  background-color: #f8f8f8;
-  border-radius: 8px;
-  border-left: 4px solid #4CAF50;
-}
-
-.task-timer {
-  font-size: 20px;
-  min-width: 100px;
-  text-align: right;
+  padding: 10px;
+  margin: 10px 0;
+  flex-direction: column; /* Stack elements vertically on mobile */
+  align-items: flex-start;
+  gap: 10px;
 }
 
 .task-controls {
-  display: flex;
-  align-items: center;
-  gap: 15px;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.task-timer {
+  font-size: 16px;
+  width: 100%;
+  text-align: left;
+  margin-bottom: 5px;
 }
 
 .time-inputs {
-  display: flex;
-  gap: 5px;
-  margin: 0 15px;
+  flex-wrap: wrap;
+  margin: 5px 0;
 }
 
-.time-inputs input {
-  width: 50px;
-}
+/* Add media query for larger screens */
+@media screen and (min-width: 768px) {
+  .container {
+    width: 80%;
+    padding: 20px;
+  }
 
-.play-pause-btn {
-  min-width: 80px;
+  .timer {
+    font-size: 48px;
+  }
+
+  .controls button {
+    width: auto;
+  }
+
+  .task-item {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .task-timer {
+    width: auto;
+    text-align: right;
+    margin-bottom: 0;
+  }
+
+  .task-controls {
+    width: auto;
+    flex-wrap: nowrap;
+  }
 }
